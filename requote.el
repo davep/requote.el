@@ -2,7 +2,7 @@
 ;; Copyright 2018 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 0.01
+;; Version: 1.0
 ;; Keywords: convenience, string, quotes
 ;; URL: https://github.com/davep/requote.el
 ;; Package-Requires: ((emacs "24"))
