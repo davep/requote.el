@@ -1,8 +1,8 @@
 ;;; requote.el --- Toggle quotes around a string. -*- lexical-binding: t -*-
-;; Copyright 2018 by Dave Pearson <davep@davep.org>
+;; Copyright 2018-2019 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.0
+;; Version: 1.1
 ;; Keywords: convenience, string, quotes
 ;; URL: https://github.com/davep/requote.el
 ;; Package-Requires: ((emacs "24"))
