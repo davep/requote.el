@@ -43,7 +43,7 @@ style of quote to another."
   (interactive "*r")
   (if (and start end (= (char-after start) (char-after (1- end))))
       (let ((char (string (char-after start))))
-        (cond ((string= char "\"")
+        (cond ((or (string= char "\"") (string= char "`"))
                (requote-set-char start end "'"))
               ((string= char "'")
                (requote-set-char start end "\""))
