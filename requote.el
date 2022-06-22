@@ -5,7 +5,7 @@
 ;; Version: 1.1
 ;; Keywords: convenience, string, quotes
 ;; URL: https://github.com/davep/requote.el
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "28.1"))
 
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the
@@ -30,6 +30,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'thingatpt)
 
 (defun requote-set-char (start end char)
   "Set characters at START and END to CHAR."
@@ -42,7 +43,10 @@
 
 Designed as a simple tool for quickly switching a string from one
 style of quote to another."
-  (interactive "*r")
+  (interactive (let ((region (if (region-active-p)
+                                 (car (region-bounds))
+                               (thing-at-point-bounds-of-string-at-point))))
+                 (list (car region) (cdr region))))
   (if (and start end (= (char-after start) (char-after (1- end))))
       (let ((char (string (char-after start))))
         (cond ((or (string= char "\"") (string= char "`"))
