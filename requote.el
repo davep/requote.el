@@ -29,6 +29,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defun requote-set-char (start end char)
   "Set characters at START and END to CHAR."
   (setf (buffer-substring start (1+ start)) char)
