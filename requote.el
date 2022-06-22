@@ -1,4 +1,4 @@
-;;; requote.el --- Toggle quotes around a string. -*- lexical-binding: t -*-
+;;; requote.el --- Toggle quotes around a string -*- lexical-binding: t -*-
 ;; Copyright 2018-2019 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
